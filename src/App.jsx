@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <>
-      {/* Cabecera nueva*/}
+      {/* Cabecera nueva avance*/}
       <Navbar />
     </>
   );
