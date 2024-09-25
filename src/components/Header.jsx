@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Logo from "../assets/img/logo-white.png";
 import BurguerButton from "./BurgerButton";
 
-export default function Navbar() {
+export default function HeaderPrincipal() {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -28,34 +28,36 @@ export default function Navbar() {
 
   return (
     <>
-      <NavbarContainer>
-        <img src={Logo} alt="Logo" />
-        <ul className={`links ${clicked ? "active" : ""}`}>
-          <li>
-            <a href="#">Inicio</a>
-          </li>
-          <li>
-            <a href="#">Nosotros</a>
-          </li>
-          <li>
-            <a href="#">Servicios</a>
-          </li>
-          <li>
-            <a href="#">Contacto</a>
-          </li>
+      <ContainerSecundario>
+        <NavbarContainer>
+          <img src={Logo} alt="Logo" />
+          <ul className={`links ${clicked ? "active" : ""}`}>
+            <li>
+              <a href="#">Inicio</a>
+            </li>
+            <li>
+              <a href="#">Nosotros</a>
+            </li>
+            <li>
+              <a href="#">Servicios</a>
+            </li>
+            <li>
+              <a href="#">Contacto</a>
+            </li>
 
-          <li>
-            <a href="#">
-              <span>Reservar</span>
-            </a>
-          </li>
-        </ul>
+            <li>
+              <a href="#">
+                <span>Reservar</span>
+              </a>
+            </li>
+          </ul>
 
-        <div className="burger">
-          <BurguerButton clicked={clicked} handleClick={handleClick} />
-        </div>
-        <BgDiv className={`initial ${clicked ? "active" : ""}`}></BgDiv>
-      </NavbarContainer>
+          <div className="burger">
+            <BurguerButton clicked={clicked} handleClick={handleClick} />
+          </div>
+          <BgDiv className={`initial ${clicked ? "active" : ""}`}></BgDiv>
+        </NavbarContainer>
+      </ContainerSecundario>
     </>
   );
 }
@@ -64,13 +66,12 @@ export default function Navbar() {
 const NavbarContainer = styled.nav`
   background-color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   box-shadow: 1px 5px 5px -3px rgba(0, 0, 0, 0.04);
 
   @media (max-width: 768px) {
-    display: flex;
-    justify-content: space-between;
+   
     padding: 0 20px;
   }
 
@@ -86,7 +87,6 @@ const NavbarContainer = styled.nav`
   }
 
   .links {
-
     display: flex;
     align-items: center;
     gap: 25px;
@@ -103,7 +103,7 @@ const NavbarContainer = styled.nav`
     }
 
     span {
-      background-color: #1360d3;
+      background-color: #4093d6;
       padding: 10px 25px;
       border-radius: 50px;
       color: white;
@@ -149,8 +149,8 @@ const NavbarContainer = styled.nav`
 `;
 
 const BgDiv = styled.div`
-  position: absolute;
 
+  position: absolute;
   width: 100%;
   height: 100%;
   top: -700px;
@@ -166,4 +166,10 @@ const BgDiv = styled.div`
     height: 100%;
     z-index: -1;
   }
+`;
+
+const ContainerSecundario = styled.div`
+  max-width: 1400px;
+  margin: 0 auto;
+
 `;
