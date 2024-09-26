@@ -64,16 +64,13 @@ export default function HeaderPrincipal() {
 
 // Estilos del Navbar
 const NavbarContainer = styled.nav`
+
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 1px 5px 5px -3px rgba(0, 0, 0, 0.04);
-
-  @media (max-width: 768px) {
-   
-    padding: 0 20px;
-  }
+  z-index: 10; /* Un valor alto para asegurar que el header esté encima de todo */
 
   img {
     width: 190px;
@@ -137,6 +134,7 @@ const NavbarContainer = styled.nav`
     flex-direction: column;
     text-align: center;
     padding: 0;
+    z-index: -1;
 
     li {
       margin: 25px 0;
@@ -149,7 +147,6 @@ const NavbarContainer = styled.nav`
 `;
 
 const BgDiv = styled.div`
-
   position: absolute;
   width: 100%;
   height: 100%;
@@ -171,5 +168,6 @@ const BgDiv = styled.div`
 const ContainerSecundario = styled.div`
   max-width: 1400px;
   margin: 0 auto;
-
+  padding: 0 20px;
+  background-color: white;
 `;

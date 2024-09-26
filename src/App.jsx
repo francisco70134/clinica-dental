@@ -1,15 +1,19 @@
 import styled from "styled-components";
 import "./App.css";
 import Home from "./components/Home.jsx";
+import Nosotros from "./components/Nosotros.jsx";
 
 function App() {
   return (
     <>
       {/* Cabecera nueva avance*/}
-      <Home />
+      <Home /> 
 
       <ContainerPrincipal>
         <ContainerSecundario>
+
+        {/* Nosotros */}
+        <Nosotros />
         
         </ContainerSecundario>
       </ContainerPrincipal>

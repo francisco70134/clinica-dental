@@ -20,9 +20,9 @@ export default function Inicio() {
               <br /> <span>Dental Cayetano</span>
             </h2>
             <p>
-              Nuestro objetivo es brindar un atención de primera y última
-              oportunidad a todos nuestros pacientes, garantizando una atención
-              personalizada y confiable.
+              Nuestro objetivo es brindar una atención de primera, garantizando
+              un servicio personalizado, confiable y adaptado a las necesidades
+              de cada paciente.
             </p>
 
             {/* ESPACIADOR */}
@@ -52,7 +52,6 @@ export default function Inicio() {
 }
 
 const BannerPrincipal = styled.div`
-
   position: relative;
   background-image: url(${bannerImage});
   background-size: cover;
@@ -71,18 +70,48 @@ const BannerPrincipal = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.84); /* Blanco con 95% de opacidad */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.84
+    ); /* Blanco con 95% de opacidad */
     z-index: 1; /* Asegura que la capa esté detrás del contenido */
+  }
+
+  @media (max-width: 768px) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(
+        255,
+        255,
+        255,
+        0.90
+      ); /* Blanco con 95% de opacidad */
+      z-index: 1; /* Asegura que la capa esté detrás del contenido */
+    }
   }
 
   .contenedor-secundary {
     position: relative; /* Para que el contenido esté encima de la capa */
     display: flex;
+    justify-content: space-between;
+    gap: 40px;
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
-    z-index: 2; /* Asegura que el contenido esté encima de la capa */
+    z-index: 1; /* Asegura que el contenido esté encima de la capa */
+    margin-top: -10px;    
+
+    @media (max-width: 768px) {
+      height: 500px;
+    }
   }
 
   .BannerContenido__left {
@@ -113,6 +142,12 @@ const BannerPrincipal = styled.div`
         padding: 10px 25px;
         border-radius: 15px;
       }
+
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+      }
     }
 
     .horarioAtencion {
@@ -122,9 +157,7 @@ const BannerPrincipal = styled.div`
       background-color: white;
       padding: 0 10px;
       border-radius: 15px;
-      box-shadow: 7px 2px 56px -7px rgba(227,220,227,0.43);
-
-
+      box-shadow: 7px 2px 56px -7px rgba(227, 220, 227, 0.43);
 
       img {
         width: 48px;
@@ -146,6 +179,10 @@ const BannerPrincipal = styled.div`
   .BannerContenido__right {
     img {
       margin-bottom: -27px;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 
