@@ -91,7 +91,7 @@ const BannerPrincipal = styled.div`
         255,
         255,
         255,
-        0.90
+        0.9
       ); /* Blanco con 95% de opacidad */
       z-index: 1; /* Asegura que la capa esté detrás del contenido */
     }
@@ -107,7 +107,7 @@ const BannerPrincipal = styled.div`
     margin: 0 auto;
     padding: 20px;
     z-index: 1; /* Asegura que el contenido esté encima de la capa */
-    margin-top: -10px;    
+    margin-top: -10px;
 
     @media (max-width: 768px) {
       height: 500px;
@@ -129,6 +129,25 @@ const BannerPrincipal = styled.div`
 
     p {
       text-align: left;
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        text-align: left;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 1.2;
+
+        span {
+          font-weight: 700;
+          color: #4093d6;
+        }
+      }
+
+      p {
+        text-align: left;
+        font-size: 14px;
+      }
     }
 
     .componentes_left {
@@ -172,6 +191,17 @@ const BannerPrincipal = styled.div`
       span {
         color: #4093d6;
         font-weight: 600;
+      }
+
+      @media (max-width: 768px) {
+        p {
+          font-size: 14px;
+        }
+
+        span {
+          color: #4093d6;
+          font-weight: 600;
+        }
       }
     }
   }

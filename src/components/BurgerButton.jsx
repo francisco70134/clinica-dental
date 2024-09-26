@@ -17,39 +17,26 @@ export default function BurguerButton({ clicked, handleClick }) {
 
 
 const Burguer = styled.div`
-
   .hamburger {
     background-color: transparent;
-    left: 0;
-    top: 0;
+    position: relative;
     height: 30px;
     width: 30px;
-    padding: 05px 05px;
-    transform: translate3d(0, 0, 0);
-    transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-    z-index: 1002;
+    padding: 5px;
+    z-index: 101; /* Asegura que el botón de hamburguesa esté encima de todo */
     cursor: pointer;
     user-select: none;
-    border: none; /* Elimina bordes si los hay */
-    outline: none; /* Elimina el outline por defecto */
-    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
   }
 
-
-  &:focus {
-      outline: none; /* Evita el outline en focus */
-    }
-
-    &:active {
-      background-color: transparent; /* Evita el fondo azul al hacer clic */
-      outline: none; /* Asegúrate de que no tenga outline en active */
-    }
   .hamburger.is-active {
-    background-color: none;
+    background-color: transparent;
   }
 
   ._layer {
-    background: #333333;
+    background: #333;
     margin-bottom: 4px;
     border-radius: 2px;
     width: 28px;
@@ -57,14 +44,6 @@ const Burguer = styled.div`
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-  }
-
-  .hamburger:hover .-top {
-    transform: translateY(-100%);
-  }
-
-  .hamburger:hover .-bottom {
-    transform: translateY(100%);
   }
 
   .hamburger.is-active .-top {
@@ -77,49 +56,5 @@ const Burguer = styled.div`
 
   .hamburger.is-active .-bottom {
     transform: translateY(-200%) rotate(135deg) !important;
-  }
-
-  .menuppal.is_active {
-    transform: translate3d(0px, 0px, 0px);
-  }
-
-  .menuppal {
-    background-color: rgba(255, 255, 255, 0.95);
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    overflow-y: scroll;
-    position: fixed;
-    top: 0;
-    transform: translate3d(0px, -100%, 0px);
-    transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
-    width: 100%;
-    z-index: 1001;
-  }
-
-  .menuppal ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  .menuppal ul li {
-    list-style: none;
-    text-align: center;
-    font-family: Verdana, Arial, Helvetica;
-    font-size: 1.5rem;
-    line-height: 3em;
-    height: 3em;
-    color: #369;
-    font-weight: bold;
-  }
-
-  .menuppal ul li a {
-    text-decoration: none;
-    color: #369;
-  }
-
-  .menuppal ul li a:hover {
-    text-decoration: none;
-    color: #333;
   }
 `;

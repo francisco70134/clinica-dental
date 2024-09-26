@@ -64,13 +64,15 @@ export default function HeaderPrincipal() {
 
 // Estilos del Navbar
 const NavbarContainer = styled.nav`
-
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 1px 5px 5px -3px rgba(0, 0, 0, 0.04);
-  z-index: 10; /* Un valor alto para asegurar que el header esté encima de todo */
+  z-index: 100; /* Asegura que el Header esté encima del contenido */
 
   img {
     width: 190px;
@@ -78,6 +80,7 @@ const NavbarContainer = styled.nav`
   }
 
   .burger {
+    z-index: 101; /* Asegura que el botón de hamburguesa esté siempre encima */
     @media (min-width: 768px) {
       display: none;
     }
@@ -134,8 +137,8 @@ const NavbarContainer = styled.nav`
     flex-direction: column;
     text-align: center;
     padding: 0;
-    z-index: -1;
-
+    z-index: 99; /* Asegura que los links del menú estén por debajo del Header pero encima del contenido */
+    
     li {
       margin: 25px 0;
 
@@ -146,24 +149,29 @@ const NavbarContainer = styled.nav`
   }
 `;
 
+
+
 const BgDiv = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
-  top: -700px;
-  left: -200px;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 50; /* Asegura que esté debajo del Header y los botones */
   transition: all 0.6s ease;
+
   &.active {
     background-color: #0e51b5;
     border-radius: 0 0 70% 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 50; /* Mantiene el z-index cuando está activo */
+    overflow-y: hidden; /* Oculta el scroll vertical */
   }
 `;
+
+
+
 
 const ContainerSecundario = styled.div`
   max-width: 1400px;
