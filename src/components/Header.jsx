@@ -24,6 +24,7 @@ export default function HeaderPrincipal() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+    
   }, []);
 
   return (
