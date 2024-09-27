@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../assets/img/logo-white.png";
 import BurguerButton from "./BurgerButton";
+import CustomButton from "./CustomButton";
 
 export default function HeaderPrincipal() {
   const [clicked, setClicked] = useState(false);
@@ -24,14 +25,12 @@ export default function HeaderPrincipal() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-    
   }, []);
 
   return (
     <>
       <ContainerSecundario>
         <NavbarContainer>
-          
           <img src={Logo} alt="Logo" />
           <ul className={`links ${clicked ? "active" : ""}`}>
             <li>
@@ -48,20 +47,16 @@ export default function HeaderPrincipal() {
             </li>
 
             <li>
-              <a href="#">
-                <span>Reservar</span>
-              </a>
+              <CustomButton text="Resevar cita" link="#" id="" />
             </li>
           </ul>
 
           <div className="burger">
             <BurguerButton clicked={clicked} handleClick={handleClick} />
           </div>
-        
         </NavbarContainer>
-        
-        <BgDiv className={`initial ${clicked ? "active" : ""}`}></BgDiv>
 
+        <BgDiv className={`initial ${clicked ? "active" : ""}`}></BgDiv>
       </ContainerSecundario>
     </>
   );
@@ -69,7 +64,6 @@ export default function HeaderPrincipal() {
 
 // Estilos del Navbar
 const NavbarContainer = styled.nav`
-
   top: 0;
   left: 0;
   width: 100%;
@@ -100,12 +94,6 @@ const NavbarContainer = styled.nav`
 
     li {
       list-style: none;
-
-      a {
-        color: #0e51b5;
-        text-decoration: none;
-        font-size: 13px;
-      }
     }
 
     span {
@@ -144,7 +132,7 @@ const NavbarContainer = styled.nav`
     text-align: center;
     padding: 0;
     z-index: 99; /* Asegura que los links del menú estén por debajo del Header pero encima del contenido */
-    
+
     li {
       margin: 25px 0;
 
@@ -154,8 +142,6 @@ const NavbarContainer = styled.nav`
     }
   }
 `;
-
-
 
 const BgDiv = styled.div`
   position: relative;
@@ -175,11 +161,7 @@ const BgDiv = styled.div`
     z-index: 50; /* Mantiene el z-index cuando está activo */
     overflow-y: hidden; /* Oculta el scroll vertical */
   }
-  
 `;
-
-
-
 
 const ContainerSecundario = styled.div`
   max-width: 1400px;
