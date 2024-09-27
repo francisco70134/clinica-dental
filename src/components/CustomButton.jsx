@@ -21,5 +21,7 @@ const Referencia = styled.a`
   &:hover {
     background-color: #02a2ff;
     color: white;
+    font-size: 15px;
   }
+  
 `;

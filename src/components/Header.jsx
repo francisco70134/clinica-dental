@@ -164,8 +164,9 @@ const BgDiv = styled.div`
 `;
 
 const ContainerSecundario = styled.div`
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   background-color: white;
+  margin-bottom: 13px;
 `;

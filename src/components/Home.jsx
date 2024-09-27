@@ -4,6 +4,7 @@ import HeaderPrincipal from "./Header.jsx";
 import bannerImage from "../assets/img/bannerPrincipal.jpeg";
 import icoReloj from "../assets/img/ico-reloj.png";
 import doctor from "../assets/img/doctor.png";
+import CustomButton from "./CustomButton";
 
 export default function Inicio() {
   return (
@@ -15,12 +16,11 @@ export default function Inicio() {
         <div className="contenedor-secundary">
           {/* Column Left */}
           <div className="BannerContenido__left">
-
             <h2>
               Clínica
               <br /> <span>Dental Cayetano</span>
             </h2>
-            
+
             <p>
               Nuestro objetivo es brindar una atención de primera, garantizando
               un servicio personalizado, confiable y adaptado a las necesidades
@@ -31,7 +31,8 @@ export default function Inicio() {
             <br />
 
             <div className="componentes_left">
-              <a href="#">Contáctenos</a>
+              {/* boton */}
+              <CustomButton text="Contáctenos" link="#" id="" />
 
               <div className="horarioAtencion">
                 <img src={icoReloj} alt="Reloj" />
@@ -105,7 +106,7 @@ const BannerPrincipal = styled.div`
     justify-content: space-between;
     gap: 40px;
     align-items: center;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     z-index: 1; /* Asegura que el contenido esté encima de la capa */
@@ -156,13 +157,6 @@ const BannerPrincipal = styled.div`
       display: flex;
       align-items: center;
       gap: 2rem;
-
-      a {
-        background-color: #4093d6;
-        color: white;
-        padding: 10px 25px;
-        border-radius: 15px;
-      }
 
       @media (max-width: 768px) {
         display: flex;

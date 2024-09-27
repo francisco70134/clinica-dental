@@ -26,6 +26,10 @@ body {
   box-sizing: border-box;
 }
 
+p {
+  font-size: 14px;
+}
+
 h1,
 h2,
 h3,
