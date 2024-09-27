@@ -15,10 +15,12 @@ export default function Inicio() {
         <div className="contenedor-secundary">
           {/* Column Left */}
           <div className="BannerContenido__left">
+
             <h2>
               Clínica
               <br /> <span>Dental Cayetano</span>
             </h2>
+            
             <p>
               Nuestro objetivo es brindar una atención de primera, garantizando
               un servicio personalizado, confiable y adaptado a las necesidades

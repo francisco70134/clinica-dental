@@ -30,6 +30,7 @@ export default function HeaderPrincipal() {
     <>
       <ContainerSecundario>
         <NavbarContainer>
+          
           <img src={Logo} alt="Logo" />
           <ul className={`links ${clicked ? "active" : ""}`}>
             <li>
@@ -55,8 +56,11 @@ export default function HeaderPrincipal() {
           <div className="burger">
             <BurguerButton clicked={clicked} handleClick={handleClick} />
           </div>
-          <BgDiv className={`initial ${clicked ? "active" : ""}`}></BgDiv>
+        
         </NavbarContainer>
+        
+        <BgDiv className={`initial ${clicked ? "active" : ""}`}></BgDiv>
+
       </ContainerSecundario>
     </>
   );
@@ -64,6 +68,7 @@ export default function HeaderPrincipal() {
 
 // Estilos del Navbar
 const NavbarContainer = styled.nav`
+
   top: 0;
   left: 0;
   width: 100%;
@@ -152,7 +157,7 @@ const NavbarContainer = styled.nav`
 
 
 const BgDiv = styled.div`
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%;
   top: 0;
@@ -161,6 +166,7 @@ const BgDiv = styled.div`
   transition: all 0.6s ease;
 
   &.active {
+    position: fixed;
     background-color: #0e51b5;
     border-radius: 0 0 70% 0;
     width: 100%;
@@ -168,6 +174,7 @@ const BgDiv = styled.div`
     z-index: 50; /* Mantiene el z-index cuando está activo */
     overflow-y: hidden; /* Oculta el scroll vertical */
   }
+  
 `;
 
 

@@ -12,9 +12,8 @@ export default function BurguerButton({ clicked, handleClick }) {
       </div>
     </Burguer>
   );
+
 }
-
-
 
 const Burguer = styled.div`
   .hamburger {
