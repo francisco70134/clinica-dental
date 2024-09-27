@@ -7,7 +7,7 @@ export default function HeaderPrincipal() {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
-    setClicked(!clicked); // Alterna el estado
+    setClicked(!clicked); // Alterna el estado.
   };
 
   // Efecto para cerrar el menú cuando la pantalla es redimensionada
