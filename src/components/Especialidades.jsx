@@ -5,16 +5,20 @@ import Coronas from "../assets/img/coronas.png";
 import Profilaxis from "../assets/img/profilaxis.png";
 import Implantes from "../assets/img/implantes.png";
 import Resinas from "../assets/img/resinas.png";
-import CustomButton from "./CustomButton";
-
+import CustomButton from "../components/Button/CustomButton";
+import TituloPrincipal from "../components/Encabezados/TituloPrincipal";
 export default function Especialidades() {
   return (
     <>
       <EspecialidadesSection>
-        <div className="ContainerEspe">
-          <h2>
-            Contamos con diferentes <span>Especialidades</span>
-          </h2>
+        <div>
+
+
+          <TituloPrincipal
+            text=" Contamos con diferente"
+            textStyle="Especialidades"
+            alineacion=""
+          />
 
           <div className="Especialidades">
             <CardsComponent
@@ -49,7 +53,7 @@ export default function Especialidades() {
           </div>
 
           <div className="btnVermasEspecialidades">
-            <CustomButton link="#" text="Ver más" id=''></CustomButton>
+            <CustomButton link="#" text="Ver más" id=""></CustomButton>
           </div>
         </div>
       </EspecialidadesSection>
@@ -79,17 +83,4 @@ const EspecialidadesSection = styled.section`
     margin: 20px auto;
   }
 
-  .ContainerEspe {
-    h2 {
-      text-align: center;
-      font-weight: 400;
-      font-size: 30px;
-      line-height: 1.2;
-
-      span {
-        font-weight: 700;
-        color: #4093d6;
-      }
-    }
-  }
 `;

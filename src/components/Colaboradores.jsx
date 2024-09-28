@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import bannerImage from "../assets/img/bannerPrincipal.jpeg";
+import TituloPrincipal from "../components/Encabezados/TituloPrincipal";
 
 export default function Colaboradores() {
   return (
     <>
       <ColaboradoresSection>
         <div className="ContainerColab">
-          <h2>
-            Nuestros <span>Colaboradores</span>
-          </h2>
+        <TituloPrincipal text="Nuestros" textStyle="Colaboradores" alineacion=""/><br/><br/>
+
 
           <div className="Colaboradores">
             <div className="Marcas">
@@ -66,19 +66,6 @@ const ColaboradoresSection = styled.section`
     position: relative;
     z-index: 2; 
 
-    h2 {
-      text-align: center;
-      font-weight: 400;
-      font-size: 30px;
-      line-height: 1.2;
-
-      margin-bottom: 40px;
-
-      span {
-        font-weight: 700;
-        color: #4093d6;
-      }
-    }
   }
   .Colaboradores {
     display: grid;

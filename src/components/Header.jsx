@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../assets/img/logo-white.png";
 import BurguerButton from "./BurgerButton";
-import CustomButton from "./CustomButton";
+import CustomButton from "./Button/CustomButton";
 
 export default function HeaderPrincipal() {
   const [clicked, setClicked] = useState(false);
@@ -26,6 +26,15 @@ export default function HeaderPrincipal() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // Deshabilita el scroll cuando el menú está activo
+  useEffect(() => {
+    if (clicked) {
+      document.body.style.overflow = "hidden"; // Deshabilita el scroll
+    } else {
+      document.body.style.overflow = "auto"; // Habilita el scroll
+    }
+  }, [clicked]);
 
   return (
     <>

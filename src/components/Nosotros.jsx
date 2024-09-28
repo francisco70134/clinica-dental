@@ -3,7 +3,8 @@ import styled from "styled-components";
 import Doctor2 from "../assets/img/doctor2.png";
 import Diente from "../assets/img/diente-ico.png";
 import Verificado from "../assets/img/verficado-ico.png";
-import CustomButton from "./CustomButton";
+import CustomButton from "../components/Button/CustomButton";
+import TituloPrincipal from "../components/Encabezados/TituloPrincipal";
 
 export default function Nosotross() {
   return (
@@ -14,11 +15,9 @@ export default function Nosotross() {
           <img src={Verificado} className="verificado-ico" alt="Verified" />
         </div>
         <div className="nosotros-right">
-          <div className="title-ico-nosotros">
-            <h2>
-              Acerca de <span>Nosotros</span>
-            </h2>
 
+          <div className="title-ico-nosotros">
+            <TituloPrincipal text="Acerca de" textStyle="Nosotros" alineacion="left"/>
             <img src={Diente} alt="Diente" />
           </div>
 
@@ -51,32 +50,17 @@ const Nosotros = styled.section`
   @media (max-width: 768px) {
     display: flex;
     flex-wrap: wrap-reverse;
-  
-
   }
 
   .title-ico-nosotros {
     display: flex;
     align-items: center;
     gap: 10px;
-
-    h2 {
-      text-align: left;
-      font-weight: 400;
-      font-size: 30px;
-      line-height: 1.2;
-
-      span {
-        font-weight: 700;
-        color: #4093d6;
-      }
-    }
   }
 
   .nosotros-right {
-    
     width: 100%; /* Asegura que el contenido no se expanda */
-    
+
     p {
       margin: 15px 0 35px 0;
       text-align: justify;
@@ -84,13 +68,9 @@ const Nosotros = styled.section`
   }
 
   .nosotros-left {
-
-   
-
     @media (max-width: 768px) {
       min-width: 200px; /* Limita el ancho del lado derecho */
-
-  }
+    }
 
     img {
       width: 100%;

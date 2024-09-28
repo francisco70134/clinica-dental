@@ -4,7 +4,7 @@ import HeaderPrincipal from "./Header.jsx";
 import bannerImage from "../assets/img/bannerPrincipal.jpeg";
 import icoReloj from "../assets/img/ico-reloj.png";
 import doctor from "../assets/img/doctor.png";
-import CustomButton from "./CustomButton";
+import CustomButton from "../components/Button/CustomButton";
 
 export default function Inicio() {
   return (
