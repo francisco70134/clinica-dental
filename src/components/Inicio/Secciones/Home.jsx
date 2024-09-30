@@ -28,7 +28,7 @@ export default function Inicio() {
 
             <div className="componentes_left">
               {/* boton */}
-              <CustomButton text="Contáctenos" link="#" id="" />
+              <CustomButton text="Contáctenos" link="/clinica-dental/contacto" id="" />
 
               <div className="horarioAtencion">
                 <img src={icoReloj} alt="Reloj" />

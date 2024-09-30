@@ -41,7 +41,7 @@ export default function HeaderPrincipal() {
     { text: "Inicio", path: "/" },
     { text: "Nosotros", path: "/nosotros" },
     { text: "Servicios", path: "/servicios" },
-    { text: "Contacto", path: "/contacto" }
+    { text: "Contacto", path: "/contacto" },
   ];
 
   // Función que cierra el menú cuando se hace clic en un enlace
@@ -53,7 +53,10 @@ export default function HeaderPrincipal() {
     <>
       <ContainerSecundario>
         <NavbarContainer>
-          <img src={Logo} alt="Logo" />
+          <Link to="/">
+            <img src={Logo} alt="Logo" />
+          </Link>
+
           <ul className={`links ${clicked ? "active" : ""}`}>
             {links.map((item, index) => (
               <li key={index}>
