@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Logo from "../assets/img/logo-white.png";
 import BurguerButton from "./BurgerButton";
 import CustomButton from "./Button/CustomButton";
+import { Link } from "react-router-dom";
 
 export default function HeaderPrincipal() {
   const [clicked, setClicked] = useState(false);
@@ -43,16 +44,16 @@ export default function HeaderPrincipal() {
           <img src={Logo} alt="Logo" />
           <ul className={`links ${clicked ? "active" : ""}`}>
             <li>
-              <a href="#">Inicio</a>
+              <Link to="/">Inicio</Link>
             </li>
             <li>
-              <a href="#">Nosotros</a>
+              <Link to="/nosotros">Nosotros</Link>
             </li>
             <li>
-              <a href="#">Servicios</a>
+              <Link to="/servicios">Servicios</Link>
             </li>
             <li>
-              <a href="#">Contacto</a>
+              <Link to="/contacto">Contacto</Link>
             </li>
 
             <li>
