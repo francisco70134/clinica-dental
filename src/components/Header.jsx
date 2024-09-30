@@ -44,20 +44,27 @@ export default function HeaderPrincipal() {
     { text: "Contacto", path: "/contacto" }
   ];
 
+  // Función que cierra el menú cuando se hace clic en un enlace
+  const handleLinkClick = () => {
+    setClicked(false);
+  };
+
   return (
     <>
       <ContainerSecundario>
         <NavbarContainer>
           <img src={Logo} alt="Logo" />
           <ul className={`links ${clicked ? "active" : ""}`}>
-
             {links.map((item, index) => (
               <li key={index}>
-                <Link to={item.path}>{item.text}</Link> 
+                {/* Cierra el menú al hacer clic en cualquier enlace */}
+                <Link to={item.path} onClick={handleLinkClick}>
+                  {item.text}
+                </Link>
               </li>
             ))}
 
-            {/* Boton reservar */}
+            {/* Botón reservar */}
             <li>
               <CustomButton text="Reservar cita" link="#" id="" />
             </li>
@@ -78,12 +85,13 @@ export default function HeaderPrincipal() {
 const NavbarContainer = styled.nav`
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 1px 5px 5px -3px rgba(0, 0, 0, 0.04);
   z-index: 100; /* Asegura que el Header esté encima del contenido */
 
   img {
@@ -176,9 +184,8 @@ const BgDiv = styled.div`
 `;
 
 const ContainerSecundario = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
   background-color: white;
   margin-bottom: 13px;
+  box-shadow: 1px 5px 5px -3px rgba(0, 0, 0, 0.04);
 `;
