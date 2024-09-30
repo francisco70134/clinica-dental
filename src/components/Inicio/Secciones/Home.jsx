@@ -1,17 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import HeaderPrincipal from "./Header.jsx";
-import bannerImage from "../assets/img/bannerPrincipal.jpeg";
-import icoReloj from "../assets/img/ico-reloj.png";
-import doctor from "../assets/img/doctor.png";
-import CustomButton from "../components/Button/CustomButton";
+import bannerImage from "../../../assets/img/bannerPrincipal.jpeg";
+import icoReloj from "../../../assets/img/ico-reloj.png";
+import doctor from "../../../assets/img/doctor.png";
+import CustomButton from "../../Button/CustomButton";
 
 export default function Inicio() {
   return (
     <>
-      {/* Cabecera */}
-      <HeaderPrincipal />
-
       <BannerPrincipal>
         <div className="contenedor-secundary">
           {/* Column Left */}

@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import CardsComponent from "../components/Cards/CardsComponent";
-import Coronas from "../assets/img/coronas.png";
-import Profilaxis from "../assets/img/profilaxis.png";
-import Implantes from "../assets/img/implantes.png";
-import Resinas from "../assets/img/resinas.png";
-import CustomButton from "../components/Button/CustomButton";
-import TituloPrincipal from "../components/Encabezados/TituloPrincipal";
+import CardsComponent from "../../Cards/CardsComponent";
+import Coronas from "../../../assets/img/coronas.png";
+import Profilaxis from "../../../assets/img/profilaxis.png";
+import Implantes from "../../../assets/img/implantes.png";
+import Resinas from "../../../assets/img/resinas.png";
+import CustomButton from "../../Button/CustomButton";
+import TituloPrincipal from "../../Encabezados/TituloPrincipal";
 export default function Especialidades() {
   return (
     <>

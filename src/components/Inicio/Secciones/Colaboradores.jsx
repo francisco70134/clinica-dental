@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import bannerImage from "../assets/img/bannerPrincipal.jpeg";
-import TituloPrincipal from "../components/Encabezados/TituloPrincipal";
+import bannerImage from "../../../assets/img/bannerPrincipal.jpeg";
+import TituloPrincipal from "../../Encabezados/TituloPrincipal";
 
 export default function Colaboradores() {
   return (
     <>
       <ColaboradoresSection>
+
         <div className="ContainerColab">
         <TituloPrincipal text="Nuestros" textStyle="Colaboradores" alineacion=""/><br/><br/>
 
@@ -18,15 +19,15 @@ export default function Colaboradores() {
             </div>
             <div className="Marcas">
               <img src="https://via.placeholder.com/150" alt="Colaborador 1" />
-              <h5>Colaborador 1</h5>
+              <h5>Colaborador 2</h5>
             </div>
             <div className="Marcas">
               <img src="https://via.placeholder.com/150" alt="Colaborador 1" />
-              <h5>Colaborador 1</h5>
+              <h5>Colaborador 3</h5>
             </div>
             <div className="Marcas">
               <img src="https://via.placeholder.com/150" alt="Colaborador 1" />
-              <h5>Colaborador 1</h5>
+              <h5>Colaborador 4</h5>
             </div>
           </div>
         </div>

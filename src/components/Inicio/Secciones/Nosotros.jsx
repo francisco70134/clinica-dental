@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Doctor2 from "../assets/img/doctor2.png";
-import Diente from "../assets/img/diente-ico.png";
-import Verificado from "../assets/img/verficado-ico.png";
-import CustomButton from "../components/Button/CustomButton";
-import TituloPrincipal from "../components/Encabezados/TituloPrincipal";
+import Doctor2 from "../../../assets/img/doctor2.png";
+import Diente from "../../../assets/img/diente-ico.png";
+import Verificado from "../../../assets/img/verficado-ico.png";
+import CustomButton from "../../Button/CustomButton";
+import TituloPrincipal from "../../Encabezados/TituloPrincipal";
 
 export default function Nosotross() {
   return (
