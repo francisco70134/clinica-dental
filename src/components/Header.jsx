@@ -37,27 +37,29 @@ export default function HeaderPrincipal() {
     }
   }, [clicked]);
 
+  const links = [
+    { text: "Inicio", path: "/" },
+    { text: "Nosotros", path: "/nosotros" },
+    { text: "Servicios", path: "/servicios" },
+    { text: "Contacto", path: "/contacto" }
+  ];
+
   return (
     <>
       <ContainerSecundario>
         <NavbarContainer>
           <img src={Logo} alt="Logo" />
           <ul className={`links ${clicked ? "active" : ""}`}>
-            <li>
-              <Link to="/">Inicio</Link>
-            </li>
-            <li>
-              <Link to="/nosotros">Nosotros</Link>
-            </li>
-            <li>
-              <Link to="/servicios">Servicios</Link>
-            </li>
-            <li>
-              <Link to="/contacto">Contacto</Link>
-            </li>
 
+            {links.map((item, index) => (
+              <li key={index}>
+                <Link to={item.path}>{item.text}</Link> 
+              </li>
+            ))}
+
+            {/* Boton reservar */}
             <li>
-              <CustomButton text="Resevar cita" link="#" id="" />
+              <CustomButton text="Reservar cita" link="#" id="" />
             </li>
           </ul>
 
