@@ -37,7 +37,7 @@ export default function Colaboradores() {
           <br />
           <br />
 
-          {/* Carrusel */}
+          {/* Carrusel nuevo */}
           <Carousel responsive={responsive} infinite={true} autoPlay={false}>
             <div className="Marcas">
               <img src="https://via.placeholder.com/150" alt="Colaborador 1" />
